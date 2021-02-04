@@ -1,4 +1,4 @@
-@media (min-width: 381px) and (max-width: 1150px) {
+@media (min-width: 691px) and (max-width: 1150px) {
    body #header {
        nav  {
         padding: 0 34px 0 41px;
@@ -10,7 +10,44 @@
            right: 0;
            margin: auto;
        }
-   } 
+   }
+   body #infos {
+    .image-infos {
+        background-position: center;
+    }
+    .text-infos {
+        padding-left: 43px;
+        padding-top: 44px;
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 12px;
+            width: 341px;
+        }
+    }
+} 
+}
+
+@media (min-width: 691px) and (max-width: 800px) {
+    body #infos {
+        .image-infos {
+            background-position: center;
+        }
+        .text-infos {
+            padding-left: 43px;
+            padding-top: 44px;
+            h2 {
+                font-size: 22px;
+
+            }
+            p {
+                font-size: 12px;
+                width: 261px;
+
+            }
+        }
+    }
 }
 
 @media (min-width: 0px) and (max-width: 690px) {
@@ -42,6 +79,43 @@
                 font-size: 39px;
                 bottom: 172px;
                 padding: 25px;
+            }
+        }
+        .background-image-transparent-header {
+            background-color: rgb(0 0 0 / 11%);
+        }
+    }
+
+    body #infos {
+        display: flex;
+        flex-direction: column;
+        padding: 22% 0;
+        height: auto;
+        .image-infos {
+            background-image: url('../images/mobile/image-interactive.jpg');
+            background-size: cover;
+            width: 80%;
+            height: 206px;
+            margin: 0 auto;
+            
+        }
+        .text-infos {
+            padding-left: 0;
+            padding-top: 50px;
+            h2, p {
+                text-align: center;
+                width: 80%;
+                margin: auto;
+                font-weight: 500;
+            }
+            h2 {
+                font-size: 36px;
+            }
+            p{
+                font-size: 17px;
+                line-height: 1.8rem;
+                margin-top: 27px;
+
             }
         }
     }

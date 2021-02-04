@@ -18,6 +18,7 @@ body #header {
   width: 100%;
   background-image: url("../images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 body #header nav {
   grid-column: 1/span 7;
@@ -27,7 +28,7 @@ body #header nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 170px 0 128px;
+  padding: 0 170px;
   height: 150px;
   z-index: 10;
 }
@@ -80,7 +81,43 @@ body #header .text-header h1 {
   font-weight: 100;
   padding: 35px 21px 25px 37px;
 }
-@media (min-width: 381px) and (max-width: 1150px) {
+body #infos {
+  display: grid;
+  grid-template-columns: 0.8fr 2.1fr 0.5fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.6fr 1fr 0.5fr;
+  height: 800px;
+}
+body #infos .image-infos {
+  grid-column: 2/span 2;
+  grid-row: 2/span 2;
+  overflow: hidden;
+  background-image: url("../images/desktop/image-interactive.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  height: 499px;
+}
+body #infos .text-infos {
+  background-color: white;
+  grid-column: 3/span 3;
+  grid-row: 3/span 1;
+  padding-left: 61px;
+  padding-top: 67px;
+}
+body #infos .text-infos h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 43px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+body #infos .text-infos p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 0;
+  width: 385px;
+  line-height: 1.5rem;
+}
+@media (min-width: 691px) and (max-width: 1150px) {
   body #header nav {
     padding: 0 34px 0 41px;
   }
@@ -89,6 +126,37 @@ body #header .text-header h1 {
     left: 0;
     right: 0;
     margin: auto;
+  }
+
+  body #infos .image-infos {
+    background-position: center;
+  }
+  body #infos .text-infos {
+    padding-left: 43px;
+    padding-top: 44px;
+  }
+  body #infos .text-infos h2 {
+    font-size: 32px;
+  }
+  body #infos .text-infos p {
+    font-size: 12px;
+    width: 341px;
+  }
+}
+@media (min-width: 691px) and (max-width: 800px) {
+  body #infos .image-infos {
+    background-position: center;
+  }
+  body #infos .text-infos {
+    padding-left: 43px;
+    padding-top: 44px;
+  }
+  body #infos .text-infos h2 {
+    font-size: 22px;
+  }
+  body #infos .text-infos p {
+    font-size: 12px;
+    width: 261px;
   }
 }
 @media (min-width: 0px) and (max-width: 690px) {
@@ -118,6 +186,41 @@ body #header .text-header h1 {
     font-size: 39px;
     bottom: 172px;
     padding: 25px;
+  }
+  body #header .background-image-transparent-header {
+    background-color: rgba(0, 0, 0, 0.11);
+  }
+
+  body #infos {
+    display: flex;
+    flex-direction: column;
+    padding: 22% 0;
+    height: auto;
+  }
+  body #infos .image-infos {
+    background-image: url("../images/mobile/image-interactive.jpg");
+    background-size: cover;
+    width: 80%;
+    height: 206px;
+    margin: 0 auto;
+  }
+  body #infos .text-infos {
+    padding-left: 0;
+    padding-top: 50px;
+  }
+  body #infos .text-infos h2, body #infos .text-infos p {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-weight: 500;
+  }
+  body #infos .text-infos h2 {
+    font-size: 36px;
+  }
+  body #infos .text-infos p {
+    font-size: 17px;
+    line-height: 1.8rem;
+    margin-top: 27px;
   }
 }
 
