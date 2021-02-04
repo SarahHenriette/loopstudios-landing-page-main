@@ -1,0 +1,111 @@
+@import './utilities/colors.scss';
+@import './utilities/font.scss';
+
+body {
+    margin: 0;
+    p{
+        font-size: 15px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #header {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 0.5fr 2fr ;
+        height: 642px;
+        width: 100%;
+        background-image: url('../images/desktop/image-hero.jpg');
+        background-repeat: no-repeat;
+        nav {
+            grid-column: 1 / span 7;
+            grid-row: 1 / span 1;
+            order: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 170px 0 128px;
+            height: 150px;
+            z-index: 10;
+            #logo {}
+            #link {
+                display: flex;
+                flex-direction: row;
+                &:hover {
+
+                }
+                li {
+                    list-style: none;
+                    padding-left: 30px;
+
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                        font-family: $alata;
+                    }
+                }
+            }
+            #link-mobile{
+                display: none;
+                width: 30px;
+                height: 30px;
+                flex-direction: column;
+                justify-content: space-around;
+                div {
+                    height: 3px;
+                    width: 100%;
+                    background-color: $white;
+                }
+            }
+        }
+        .background-image-transparent-header {
+            grid-column: 1 / span 7;
+            grid-row: 1 / span 3;
+            background-color: rgb(0 0 0 / 33%);
+        }
+        .text-header {
+            grid-column: 1/ span 7;
+            grid-row: 2 / span 2;
+            position: relative;
+            z-index: 10;
+            h1 {
+                border: 2px white solid;
+                width: 40%;
+                color: white;
+                font-family: "Josefin Sans", sans-serif;
+                text-transform: uppercase;
+                font-size: 64px;
+                position: absolute;
+                bottom: 107px;
+                left: 166px;
+                font-weight: 100;
+                padding: 35px 21px 25px 37px;
+            }
+        }
+    }
+
+
+    #infos {
+        .image-infos {
+
+        }
+        .text-infos {
+
+        }
+    }
+
+    #creations {
+        .text-creations {
+
+        }
+        .container-images-creations {}
+        .container-images-creations-mobile {}
+    }
+
+    #footer {}
+}
+
+@import './media-queries/responsive.scss';

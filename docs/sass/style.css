@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+body {
+  margin: 0;
+}
+body p {
+  font-size: 15px;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body #header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 0.5fr 2fr;
+  height: 642px;
+  width: 100%;
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+}
+body #header nav {
+  grid-column: 1/span 7;
+  grid-row: 1/span 1;
+  order: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 170px 0 128px;
+  height: 150px;
+  z-index: 10;
+}
+body #header nav #link {
+  display: flex;
+  flex-direction: row;
+}
+body #header nav #link li {
+  list-style: none;
+  padding-left: 30px;
+}
+body #header nav #link li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Alata", sans-serif;
+}
+body #header nav #link-mobile {
+  display: none;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body #header nav #link-mobile div {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+}
+body #header .background-image-transparent-header {
+  grid-column: 1/span 7;
+  grid-row: 1/span 3;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+body #header .text-header {
+  grid-column: 1/span 7;
+  grid-row: 2/span 2;
+  position: relative;
+  z-index: 10;
+}
+body #header .text-header h1 {
+  border: 2px white solid;
+  width: 40%;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  position: absolute;
+  bottom: 107px;
+  left: 166px;
+  font-weight: 100;
+  padding: 35px 21px 25px 37px;
+}
+@media (min-width: 381px) and (max-width: 1150px) {
+  body #header nav {
+    padding: 0 34px 0 41px;
+  }
+  body #header .text-header h1 {
+    width: 65%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 690px) {
+  body #header {
+    background-image: url("../images/mobile/image-hero.jpg");
+    grid-template-columns: 1fr;
+    background-size: cover;
+  }
+  body #header nav {
+    padding: 0 28px;
+    height: 106px;
+  }
+  body #header nav #link {
+    display: none;
+  }
+  body #header nav #link-mobile {
+    display: flex;
+  }
+  body #header nav #link-mobile:hover {
+    cursor: pointer;
+  }
+  body #header .text-header h1 {
+    width: 73%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 39px;
+    bottom: 172px;
+    padding: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

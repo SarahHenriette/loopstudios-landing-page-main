@@ -1,0 +1,48 @@
+@media (min-width: 381px) and (max-width: 1150px) {
+   body #header {
+       nav  {
+        padding: 0 34px 0 41px;
+
+       }
+       .text-header h1{
+           width: 65%;
+           left: 0;
+           right: 0;
+           margin: auto;
+       }
+   } 
+}
+
+@media (min-width: 0px) and (max-width: 690px) {
+    body #header {
+        background-image: url("../images/mobile/image-hero.jpg");
+        grid-template-columns: 1fr;
+        background-size: cover;
+
+        nav {
+            padding: 0 28px;
+            height: 106px;
+
+            #link {
+                display: none;
+            }
+            #link-mobile {
+                display: flex;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .text-header {
+            h1 {
+                width: 73%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                font-size: 39px;
+                bottom: 172px;
+                padding: 25px;
+            }
+        }
+    }
+}
