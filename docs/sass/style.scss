@@ -33,8 +33,7 @@ body {
             padding: 0 170px;
             height: 150px;
             z-index: 10;
-            #logo {}
-            #link {
+             #link {
                 display: flex;
                 flex-direction: row;
                 &:hover {
@@ -43,11 +42,29 @@ body {
                 li {
                     list-style: none;
                     padding-left: 30px;
-
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     a {
                         text-decoration: none;
                         color: $white;
                         font-family: $alata;
+                        margin-bottom: 10px;
+
+                    }
+                    .line-link {
+                        height: 2px;
+                        width: 0px;
+                        background-color: transparent;
+                        transition: all ease 0.5s;
+                    }
+                }
+                li:hover {
+                    .line-link {
+                        height: 2px;
+                        width: 25px;
+                        background-color: $white;
                     }
                 }
             }
@@ -136,7 +153,7 @@ body {
     #creations {
         display: grid;
         grid-template-columns: 0.8fr repeat(4, 1fr) 0.8fr;
-        grid-template-rows: 0.2fr 2fr 0.5fr;
+        grid-template-rows: 0.2fr 2fr 0.2fr;
             h2 {
                 grid-column: 2/ span 2;
                 grid-row: 1/ span 1;
@@ -163,6 +180,13 @@ body {
                 background-color: $white;
                 letter-spacing: 3px;
                 padding: 5px 0;
+                cursor: pointer;
+                transition: background-color ease 1s, color ease 1s;
+            }
+            button:hover {
+                background-color: $black;
+                color: $white;
+
             }
         #root {
             grid-column: 1 / span 6;
@@ -173,10 +197,10 @@ body {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 align-content: space-between;
-                width: 70%;
+                width: 71%;
                 margin: auto;
                 margin-top: 5%;
-                margin-bottom: 10%;
+                margin-bottom: 6%;
                 overflow: hidden;
 
             .contain-img {
@@ -197,6 +221,23 @@ body {
                     margin: 0;
                     text-transform: uppercase;
                     width: 64%;
+                }
+                div {
+                    width: 100%;
+                    height: 99.5%;
+                    position: absolute;
+                    top: 0;
+                    background-color: #00000036;
+                    transition: background-color ease 1s;
+                }
+                &:hover {
+                    cursor: pointer;
+                   div {
+                    background-color: #ffffffa8;
+                   }
+                   p {
+                       color: $black;
+                   }
                 }
             }
             .contain-img-mobile {
@@ -226,6 +267,16 @@ body {
                     width: 35%;
                     font-weight: 100;
                 }
+                div {
+                    width: 100%;
+                    height: 97%;
+                    position: absolute;
+                    top: 0;
+                    background-color: $black;
+                }
+                div:hover {
+                    background-color: $white;
+                }
             }
             }
 
@@ -235,7 +286,100 @@ body {
         }
     }
 
-    #footer {}
+    #footer {
+        background-color: $black;
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        div:first-child {
+            display: flex;
+            flex-direction: column;
+            #logo{
+                width: 162px;
+                margin-bottom: 20px;
+                img{
+                    width: 100%;
+                }
+            }
+            #link-footer {
+                color: $white;
+                display: flex;
+                li {
+                    list-style: none;
+                    padding-right: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                        font-family: $alata;
+                        margin-bottom: 10px;
+                    }
+                    .line-link {
+                        height: 2px;
+                        width: 0px;
+                        background-color: transparent;
+                        transition: all ease 0.5s;
+                    }
+                }
+
+                li:hover {
+                    .line-link {
+                        height: 2px;
+                        width: 25px;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+
+        div:last-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            ul {
+                display: flex;
+                margin-bottom: 10px;
+                li {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                li i {
+                    color: $white;
+                    margin-left: 20px;
+                    margin-bottom: 10px;
+
+                }
+                li .line-link {
+                    height: 2px;
+                    width: 0px;
+                    background-color: transparent;
+                    transition: all ease 0.5s;
+                }
+
+                li:hover {
+                    .line-link {
+                        height: 2px;
+                        width: 25px;
+                        background-color: $white;
+                        margin-left: 20px;
+                    }
+                }
+            }
+            p {
+                color: $darkGrey;
+                font-family: $alata;
+            }
+        }
+
+    }
 }
 
 @import './media-queries/responsive.scss';

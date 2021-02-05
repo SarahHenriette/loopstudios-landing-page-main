@@ -20,6 +20,7 @@ function ViewDeskopCreation(){
         return creas.map((crea)=>
         <div class={valueClassNameContain}>
             <img src={"./images/"+ view +"/"+ crea.a +'.jpg'} className={valueClassNameImg}/>
+            <div></div>
             <p>{crea.b}</p>
         </div>)
     }
