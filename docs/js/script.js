@@ -19,7 +19,7 @@ function ViewDeskopCreation(){
     function listCreations(view,valueClassNameContain, valueClassNameImg) {
         return creas.map((crea)=>
         <div class={valueClassNameContain}>
-            <img src={"./images/"+ view +"/"+ crea.a +'.jpg'} className={valueClassNameImg}/>
+            <img src={"./images/"+ view +"/"+ crea.a +'.jpg'} className={valueClassNameImg} alt={crea.b}/>
             <div></div>
             <p>{crea.b}</p>
         </div>)

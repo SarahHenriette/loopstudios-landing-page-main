@@ -279,11 +279,11 @@ body #footer div:first-child {
   display: flex;
   flex-direction: column;
 }
-body #footer div:first-child #logo {
+body #footer div:first-child #logo-footer {
   width: 162px;
   margin-bottom: 30px;
 }
-body #footer div:first-child #logo img {
+body #footer div:first-child #logo-footer img {
   width: 100%;
 }
 body #footer div:first-child #link-footer {
