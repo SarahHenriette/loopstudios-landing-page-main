@@ -10,22 +10,22 @@
            margin: auto;
        }
    }
-   body #infos {
-    .image-infos {
-        background-position: center;
-    }
-    .text-infos {
-        padding-left: 43px;
-        padding-top: 44px;
-        h2 {
-            font-size: 32px;
+    body #infos {
+        .image-infos {
+            background-position: center;
         }
-        p {
-            font-size: 12px;
-            width: 341px;
+        .text-infos {
+            padding-left: 43px;
+            padding-top: 44px;
+            h2 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 12px;
+                width: 341px;
+            }
         }
-    }
-} 
+    } 
 }
 
 
@@ -81,7 +81,7 @@
             background-size: cover;
             grid-column: 1 / span 5;
             grid-row: 2 / span 1;
-            background-color: red;
+            // background-color: red;
             overflow: hidden;
             width: 90%;
             margin: auto;
@@ -111,6 +111,13 @@
             font-size: 29px;
             line-height: 3rem;
         }
+    }
+}
+
+
+@media (min-width: 440px) and (max-width: 774px) {
+    body #creations #root .container-images-creations {
+
     }
 }
 
@@ -157,7 +164,7 @@
             background-size: cover;
             grid-column: 1 / span 5;
             grid-row: 2 / span 1;
-            background-color: red;
+            // background-color: red;
             overflow: hidden;
             width: 90%;
             margin: auto;
@@ -179,6 +186,36 @@
                 width: 76%;
                 margin: auto;
                 font-size: 16px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 774px) {
+    body #creations {
+        grid-template-columns: 0.5fr 4fr 0.5fr;
+        grid-template-rows: 0.1fr 2fr 0.5fr;
+
+        h2 {
+            grid-column: 2/span 1;
+            font-size: 34px;
+            justify-content: center;
+            margin-top: 0;
+
+        }
+        button {
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 1;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        #root {
+            .container-images-creations  {
+                // background-color: aquamarine;
+                height: auto;
+                width: 85%;
+            
             }
         }
     }

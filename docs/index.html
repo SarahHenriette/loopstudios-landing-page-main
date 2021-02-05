@@ -7,6 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./sass/style.css">
   <title>Frontend Mentor | Loopstudios landing page</title>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
   <header id="header">
@@ -49,16 +52,15 @@
     </div>
   </section>
 
-  <!--<section id="creations">
-    <div class="text-creations">
+  <section id="creations">
+    <!-- <div class="text-creations"> -->
       <h2>Our creations</h2>
       <button>See all</button>
-    </div>
-    <div class="container-images-creations"></div>
-    <div class="container-images-creations-mobile"></div>
+    <!-- </div> -->
+    <div id="root"></div>
   </section>
 
-  <footer id="footer">
+ <!-- <footer id="footer">
     <div>
       <ul id="logo">
         <img src="./images/logo.svg" alt="">
@@ -81,6 +83,6 @@
       <p>© 2021 Loopstudios. All rights reserved.</p>
     </div>
   </footer> -->
-  <script src="./js/script.js"></script>
+  <script type="text/babel" src="./js/script.js"></script>
 </body>
 </html>
